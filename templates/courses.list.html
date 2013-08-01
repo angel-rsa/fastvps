@@ -1,0 +1,16 @@
+<h2>Курсы валют на {print:date('d.m.Y')}</h2>
+<a class="btn-refresh" href="#">Обновить</a>
+<if!empty $selected_courses>
+<table class="prettyTable">
+<loop $selected_courses,$listkey,$listitem>
+    <tr>
+        <td>{$listitem['nominal']}</td>
+        <td>{$listitem['title']}</td>
+        <td>{$listitem['value']} руб.</td>
+        <td><a class="btn-remove" href="#" data-abbr="{$listitem['code']}">Убрать</a></td>
+    </tr>
+</loop $selected_courses>
+</table>
+<else>
+<p>Для показа курсов валют добавьте необходимые валюты в список отображения</p>
+</if>

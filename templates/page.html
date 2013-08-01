@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<title>Курсы валют. Тестовое задание</title>
+<meta name="description" content="Тестовое задание для PHP программиста WHMCS в компанию FastVPS">
+<meta name="keywords" content="задание, тест, валюта, тестовое задание">
+<link type="text/css" rel="stylesheet" href="css/style.css" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Курсы валют. Тестовое задание</h1>
+    </header>
+    <div class="wrapper">
+        <div class="left_side">
+            <div class="courses">
+            </div>
+            <div class="waitbox-list-load">&nbsp;</div>
+        </div>
+        <div class="right_side">
+            <h3>Добавление валюты в список отображения</h3>
+            <form method="post" action="index.php" class="valute_add">
+                <select name="currency">
+                    <option value="">Выберите валюту</option>
+                    <loop $valutes,$vkey,$valute>
+                        <option value="{$valute['code']}">{$valute['title']}</option>
+                    </loop $valutes>
+                </select>
+                <input type="submit" value="Добавить" />
+                <div class="cleaner">&nbsp;</div>
+            </form>
+        </div>
+        <div class="cleaner">&nbsp;</div>
+	<p style="text-align: right;"><a href="files/description.html">Пояснения к заданию</a></p>
+    </div>
+</body>
+</html>
